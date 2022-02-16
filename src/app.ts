@@ -46,4 +46,10 @@ const genesisBlock: Block = new Block(0, "20220216", "", "Hello World", 1);
 
 let blockChain:[Block] = [genesisBlock];
 
+const getBlockChain = (): Block[] => blockChain;
+
+const getLastestBlock = (): Block => blockChain[blockChain.length - 1];
+
+const getTimestamp = (): number => Math.round(new Date().getTime() / 1000);
+
 console.log(blockChain);
